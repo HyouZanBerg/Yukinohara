@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta-charset="UTF-8"></meta-charset>
+    <title>Yukihara's Profile Webpage</title>
+<style>
+body{background-color:black;}
+header#fixed{
+position: fixed;
+background-color:black;
+margin:0px 0px 0px 125px;
+width:1075px;
+height:80px;
+border-style:groove;
+border-color:rgb(140,0,0);
+border-width:16px;
+}
+body{margin:0}
+.section{
+position: absolute;
+background-color:rgb(250,75,50);
+width:1086px;
+margin:88px 0px 0px 125px;
+height:10000px;
+clear:right;
+border:10px groove rgb(140,0,0);
+}
+.aside-left{
+border:12px ridge darkred;
+position:fixed;
+float:left;
+background-color:black;
+width:96px;
+height:96%;
+margin:0px 0px 0px 0px;
+}
+.aside-right{
+border:12px ridge darkred;
+position:fixed;
+float:right;
+background-color:black;
+width:98px;
+height:96%;
+margin:0px 0px 0px 1242px;
+}
+.yukihara-left{
+font-size:50px;
+font-family:Comic sans ms;
+color:white;
+text-align:center;
+text-shadow:4px 5px 21px;
+text-decoration:underline black 8px;
+}
+.yukihara-right{
+font-size:50px;
+font-family:Comic sans ms;
+color:white;
+text-align:center;
+text-shadow:4px 5px 21px;
+text-decoration:underline black 8px;
+}
+span::first-line{
+background-color:grey;
+}
+#title{
+font-size:48px;
+color:white;
+text-align:center;
+margin-top:10px;
+text-decoration:overline underline black 12px;
+text-shadow:3px 2px 2px;
+word-spacing:20px;
+}
+#beginning{
+background-color:rgb(230,230,250);
+margin: 65px 0px 0px 50px;
+float:left;
+border:3px dashed black;
+width:900px;
+height:650px;
+font-size:24px;
+font-family:comic sans ms;
+}
+.other{
+background-color:rgb(230,230,250);
+margin: 87px 0px 0px 50px;
+float:left;
+border:3px dashed black;
+width:900px;
+height:450px;
+font-size:26px;
+font-family:comic sans ms;
+}
+#other2{
+background-color:rgb(230,230,250);
+margin: 87px 0px 0px 50px;
+float:left;
+border:3px dashed black;
+width:900px;
+height:550px;
+font-size:26px;
+font-family:comic sans ms;
+line-height:40px;
+}
+.beginningh1{
+text-align:center;
+margin:1px;
+text-decoration:underline black double 3px;
+text-shadow:4px 4px 10px red;
+}
+.beginningp1{
+text-align:center;
+margin:45px;
+word-spacing:6px;
+letter-spacing:2px;
+display: block;}
+#explanation{
+background-color:lightgrey;
+width:914px;
+height:60%;
+margin:170px 0px 0px 20px;
+float:left;
+border:6px solid black;
+outline:10px groove black;
+font-family:comic sans ms;
+}
+.explanation1{
+font-family:comic sans ms;
+font-size:23px;
+background-color:white;
+opacity:0.88;
+padding:25px;
+margin:65px;
+border:2px solid black;
+box-shadow:2px 5px 14px 0px rgba(0,0,0,0.8);
+}
+.explanationh2{
+font-size:30px;
+text-decoration:underline 4px;
+}
+.nav{
+background-color:rgb(250,75,50);
+border:8px groove darkred;
+position: fixed;
+height:515px;
+color:black;
+margin:110px 0px 0px 1100px;
+list-style:none;
+padding:0;
+}
+.navb{
+background-color:rgb(250,75,50);
+border:8px groove darkred;
+position: fixed;
+height:515px;
+color:black;
+margin:110px 0px 0px 1100px;
+list-style:none;
+padding:0;}
+li a{
+text-decoration:none;
+color:white;
+background-color:darkred;
+border:8px ridge black;
+width:50px;
+height:47px;
+font-size:19px;
+font-family:comic sans ms;
+padding:20px;
+display:block;
+font-style:bold;
+}
+li a:hover{
+background-color:tomato;
+color:black;
+font-size:20px;
+text-shadow:3px 3px 2px white;
+}
+li a:active{
+background-color:red;
+color:white;
+text-shadow:4px 4px 4px white;
+}
+li a:visited{
+background-color:black;
+color:grey;
+}
+.dropdown{
+display:inline-block;
+position:relative;
+}
+.dropdown-content{
+position:absolute;
+background-color:lightgrey;
+opacity:0.96;
+width:200px;
+height:100px;
+padding:16px;
+z-index:1;
+display:none;
+box-shadow:0px 8px 16px 0px rgba(0,0,0,0.4);
+font-style:verdana;
+font-size:15px;
+text-align:center;
+}
+.dropdown:hover .dropdown-content{
+display:block;
+}
+.dropdown-content2{
+position:absolute;
+display:none;
+z-index:1;
+background-color:lightgrey;
+padding:25px;
+box-shadow:0px 8px 16px 0px rgba(0,0,0,0.4);
+font-style:verdana;
+text-align:center;
+font-size:18px;
+opacity:0.96;
+}
+.dropdown:hover .dropdown-content2{
+display:block;
+}
+.dropdown-content3{
+position:absolute;
+z-index:1;
+background-color:tomato;
+border:5px ridge darkred;
+opacity:0.97;
+display:none;
+width:300px;
+font-size:25px;
+padding:15px 0px;
+text-align:central;
+box-shadow:0px 8px 16px 0px rgba(0,0,0,0.8);
+}
+.dropdown:hover .dropdown-content3{
+display:block;
+}
+.SVGbar{
+background-color:white;
+border:4px inset black;
+box-shadow:4px 8px 16px 0px rgba(0,0,0,0.6);
+width:78%;
+height:1.3%;
+margin:0px 0px 0px 67px;
+font-size:47px;
+font-family:comic sans;
+text-decoration:underline 5px black;
+text-align:center;
+}
+div.explanation1 > h2,p::selection{
+background-color:rgba(80,0,0,0.8);
+color:black;
+text-decoration:underline 3px black;
+}
+::selection{
+background-color:rgb(140,0,0);
+color:black;
+text-decoration:underline 3px black;
+}
+</style>
+</head>
+<body>
+<aside class="aside-left">
+<div class="yukihara-left">
+Y<br>
+U<br>
+K<br>
+I<br><br>
+H<br>
+A<br>
+R<br>
+A<br>
+</div>
+</aside>
+<aside class="aside-right">
+<div class="yukihara-left">
+Y<br>
+U<br>
+K<br>
+I<br><br>
+H<br>
+A<br>
+R<br>
+A<br>
+</div>
+</aside>
+<section class="section">
+    
+<div id="beginning">
+<h1 class="beginningh1" id="b">Perkenalan nama</h1>
+<p class="beginningp1"><br>yo perkenalkan nama gw Daniel.<br>
+nama 
+<span class="dropdown">
+<u>Yukihara(!)</u>
+<span class="dropdown-content">
+"yukihara" dalam bahasa jepang memiliki arti
+"daun hijau di padang salju".
+</span>
+</span>
+itu sebenarnya bukan nama asli gweh,<br> 
+kalau dibilang nama samaran sih bukan ye,-<br>
+itu nama yang bakal gw gunakan kalau seandainya <br>
+gw bisa ke jepang,tapi kalau gw gagal ya juga gpp,<br>
+masih ada banyak
+<span class="dropdown">
+<b><q><u>Jalan lain(!)</u></q></b>
+<span class="dropdown-content">
+yaitu "IT" antara gw pilih jadi <em>cyber security</em> atau jadi 
+<em>web developer</em>
+</span>
+</span>
+yang gw siapkan.<br>
+Ok makasih yang dah baca.<br><br>
+<span style="font-size:40px;font-style:italic">
+Btw, yang di kanan itu sosmed gw
+</span></p>
+</div>
+<div id="beginning" style="visibility: hidden;height:1px">
+<h1 class="beginningh1" id="b">Perkenalan nama ini</h1>
+<p class="beginningp1">yo perkenalkan nama gw Daniel.<br>
+nama Yukihara itu sebenarnya bukan nama asli gweh,<br> kalau dibilang nama samaran sih bukan ye,-<br>itu nama yang bakal gw gunakan kalau seandainya <br>gw bisa ke jepang,tapi kalau gw gagal ya juga gpp</p>
+</div>
+<div class="other">
+<h1 class="beginningh1" id="2">Passion gw</h1>
+<p class="beginningp1"><br>passion gw ada di.<br>
+bidang <strong>IT</strong> ama
+<span class="dropdown">
+<u>bahasa asing(!)</u>
+<span class="dropdown-content2">
+Bahasa jepang,bahasa korea,dan b.inggris.
+</span>
+</span>,
+<br> bidang IT yang gw madsuk itu <em>Web development</em>,<br>kalau IT gw mungkin hanya bakal berfokus disana<br>gw ga hanya fokus di bahasa asing<br>karna gw suka IT yaudah gw pilih IT juga</p>
+</div>
+<div class="other">
+<h1 class="beginningh1" id="3">Target gw kedepan nya</h1>
+<p class="beginningp1"><br><em>gw pengen menguasai banyak skill.</em><br>
+Skill yang pastinya bakal berguna dan releven,-<br>
+berdasarkan keadaan saat ini.<br>
+Gw ga yakin bahasa asing bakal berguna,<br>
+tapi karna gw wibu yaudah pelajari ajalah.</p>
+</div>
+<div id="other2">
+<h1 class="beginningh1" id="4">Keinginan gw</h1>
+<p class="beginningp1"><br>Gw berharap seandainya.<br>Sebelum umur gw nyampe 50 tahun <br>gw dah menguasai
+<span class="dropdown">
+<u>6 bahasa asing(!)</u>
+<span class="dropdown-content3">
+bahasa jepang,bahasa korea,bahasa mandarin,bahasa rusia,bahasa arab(mungkin),ama satu lagi <strong>ga tau</strong>.
+</span>
+</span>
+<br>
+selain bahasa asing juga gw menguasai <u>Python</u>,<u>Java script</u>,<u>C+ dan juga <strong><u>PHP</u></strong></u>.<br>
+Selain bahasa program dan foreign languange,<br>
+mungkin gw pengen belajar hardskill lain.<br>
+Selama umur gw masih <strong><em>ada</em></strong>.</p>
+</div>
+<section id="explanation">
+<div class="explanation1">
+<h2 class="explanationh2">Ga tau ini apa</h2>
+<p>Di sebuah desa terpencil yang jauh dari keramaian ,ada sebuah rumah tua yang sudah lama ditinggalkan.<br>
+Konon,tak ada yang berani mendekatinya karena rumah itu dipercaya dihuni oleh arwah2 yang terjebak.<br>
+Suatu hari, seorang pemuda bernama Damar,yang tak pernah percaya pada cerita2 horor,memutuskan untuk membuktikan bahwa itu hanyalah omong kosong.<br>
+Eh, begitu masuk leher dia ditusuk dar belakang,<b>perutnya dibelah hidup2 dan dijilat2 dan dimakan sedikit2</b>,dan dijadikan "kesenangan seksual",dan pada hari itu juga Damar meninggal dengan wajah bahagia.
+</p>
+</div>
+<div class="SVGbar" id="a">
+Di bawah ini Teleporter bro,click aja
+</div>
+
+<svg width="432" height="372" style="margin:50px 0px 0px 0px">
+<rect x="70" y="30" rx="400" ry="50" width="350" height="272" fill="darkred" stroke="red" stroke-width="6"/>
+<text style="font-size:30px;font-family:comic sans ms;text-align:center" x="82" y="175">
+<a href="#b"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link was broken</a>
+</text>
+</svg>
+
+<svg width="432" height="272" style="margin:5px 0px 60px 0px">
+<rect x="80" y="5" rx="10" ry="10" width="250" height="80" fill="darkred" stroke="black" stroke-width="4"/>
+<text style="font-size:30px;font-family:comic sans ms;text-align:center" x="92" y="60">
+<a href="#2">Passion(kyoumi)</a>
+</text>
+</svg>
+<svg width="832" height="272" style="margin:-260px 0px 0px 0px">
+<rect x="518" y="10" rx="10" ry="10" width="250" height="80" fill="darkred" stroke="black" stroke-width="4"/>
+<text style="font-size:30px;font-family:comic sans ms;text-align:center" x="522" y="60">
+<a href="#3">Target(mokuteki)</a>
+</text>
+</svg>
+<svg width="832" height="272" style="margin:-200px 0px 0px 0px">
+<rect x="518" y="20" rx="10" ry="10" width="250" height="80" fill="darkred" stroke="black" stroke-width="4"/>
+<text style="font-size:30px;font-family:comic sans ms;text-align:center" x="522" y="65">
+<a href="#4">keinginan(nozomi)</a>
+</text>
+</svg>
+<svg width="832" height="272" style="margin:-190px 0px 0px 0px">
+<rect x="518" y="20" rx="10" ry="10" width="250" height="80" fill="darkred" stroke="black" stroke-width="4"/>
+<text style="font-size:30px;font-family:comic sans ms;text-align:center" x="522" y="65">
+<a href="#b">Perkenalan(shoukai)</a>
+</text>
+</svg>
+</section>
+
+</section>
+<nav>
+<ul class="nav">
+<li> <a href="https://www.instagram.com/reel/DB4TtlNxYXT/?igsh=NHczYW91Z2h3dG5u
+" target="_blank">Insta<br>gram</a></li>
+<li> <a href="none" target="_blank">Face<br>book</a></li>
+<li> <a href="https://www.tiktok.com/@yuki_no_hara?fbclid=PAY2xjawGYVDNleHRuA2FlbQIxMQABpomqmVXYeg4a-gQSeYtA0hqYleAf1YTjN9NPCsa1fPRLEEeywOmCNDcA5Q_aem_rbicg-BcsNgRCqjyjq9QtA
+" target="_blank">Tiktok</a></li>
+<li><a href="https://discord.gg/sBJ6Qxhq" target="_blank">&nbsp;Dis
+Cord</a></li>
+<li> <a href="#a">Tele<br>porter</a></li>
+</ul>
+</nav>
+<header id="fixed">
+<div id="title">////////////////[Yukihara's Profile <span>Webpage]</span>\\\\\\\\\\\\\\\\\
+</div>
+</header>
+</body>
+</html>

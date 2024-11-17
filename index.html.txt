@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yukihara MainPage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" img src="ice mirror.jpeg">  
+    <style>
+    :root{
+    --white:#cccccc;
+    --black:#262626;
+    --blackver2:#0d0d0d;
+    }
+    body{
+    background-color:var(--white);
+    margin:0
+    }
+    #header{
+    background-image:linear-gradient(to right,var(--black),var(--blackver2) , black,var(--black) );
+    padding:3px;
+    width:100%;
+    position:fixed;
+    margin:0;
+    }
+    #nav-icon{
+    width:2.7%;
+    float:left;
+    margin:8px 0px 0px 4px;
+    border:3px solid black;
+    padding:5px;
+    border-radius:10px;
+    }
+    #nav-border{
+        position:absolute;
+        background-color:black;
+        width:2px;
+        height:94%;
+        margin:1px 0px 0px 77px;
+        float:left;
+        clear:both;
+    }
+    .pfp{
+    position:static;
+    width:4%;
+    height:6%;
+    float:left;
+    margin:4px 0px 0px 60px;
+    border:1px solid var(--white);
+    border-radius:26px;
+    }
+    .dropdown-1{
+        display:inline;
+        position:relative;
+        position:absolute;
+        font-size:60px;
+        margin:0px 0px 0px -47px;
+        color:rgba(0,0,0,0);
+    }
+    .dropdown-content-1{
+        display:none;
+        position:absolute;
+        background-color:white;
+        border:4px groove black;
+        padding:2px 2px;
+        width:100px;
+        word-wrap:break-word;
+        font-size:14px;
+        font-family:comic sans ms;
+        color:black;
+        border-radius:8px;
+    }
+    .dropdown-1:hover .dropdown-content-1{
+        display:block;
+        margin:-10px 0px 0px -85px;  
+    }
+    .dropdown-2{
+        display:inline;
+        position:fixed;
+        font-size:60px;
+        color:rgba(0,0,0,0);
+        margin:0px 0px 0px 1097px;
+    }
+    .dropdown-content-2{
+        position:absolute;
+        background-color:aliceblue;
+        font-size:20px;
+        font-family:comic sans ms;
+        display:none;
+        color:black;
+        margin:10px 20px 0px 0px;
+
+    }
+    .dropdown-2:hover .dropdown-content-2{
+        display:block;
+    }
+    #title{
+    font-size:55px;
+    font-family:'Courier New', Courier, monospace;
+    font-style:italic;
+    margin:-2px 0px 0px 190px;
+    color:lightgoldenrodyellow;
+    text-decoration:underline black 5px;
+    text-shadow:white 2px 2px 5px, rgba(250,0,0,0.4) 3px 3px 8px;
+    letter-spacing:9px
+    }
+    #question-icon{
+        float:right;
+        width:40px;
+        height:45px;
+        padding:3px;
+        border:4px solid black;
+        border-radius:45px;
+
+    }
+    #question-icon::selection{
+       background-color:rgba(0,0,0,0)
+    }
+    #nav-icon::selection{
+       background-color:rgba(0,0,0,0)
+    }
+    #pfp::selection{
+        background-color:rgba(0,0,0,0)
+    }
+    #title::selection{
+        background-color:rgba(0,0,0,0)
+    }
+    #header-animation{
+    float:right;
+    background-color:red;
+    width:40px;
+    height:40px;
+    margin:-50px 175px 0px 0px;
+    animation: header-animation 1s 0.3s infinite reverse, header-animation-transform 0.2s infinite;
+    border-radius:4px;
+    }
+    #header-animation2{
+    float:right;
+    background-color:red;
+    width:36px;
+    height:36px;
+    border:4px solid black;
+    margin:-50px 123px 0px 0px;
+    border-radius:10px;
+    animation: header-animation 0.2s 1s infinite reverse, header-animation-transform 0.1s infinite;
+    }
+    #header-animation3{
+    float:right;
+    background-color:red;
+    width:40px;
+    border-radius:7px;
+    height:40px;
+    margin:-50px 75px 0px 0px;
+    animation: header-animation 0.5s 0.6s infinite reverse, header-animation-transform 0.3s infinite reverse;
+    }
+    @keyframes header-animation{
+        0% {background-color:red}
+        10% {background-color:white}
+        20% {background-color:blue}
+        30% {background-color:yellow}
+        40% {background-color:green}
+        50% {background-color:pink}
+        60% {background-color:cyan}
+        70% {background-color:darkgreen}
+        80% {background-color:azure}
+        90% {background-color:bisque}
+        100% {background-color:black}
+    }
+    @keyframes header-animation-transform{
+        0%{transform:rotate(90deg) scale(1.2)}
+        50%{transform:rotate(210deg)}
+        100%{transform:rotate(340deg)}
+    }
+    .nav-column{
+        background-image:linear-gradient(to bottom,var(--black), black 40%,grey 86%, black 100% );
+        float:left;
+        height:100%;
+        width:6%;
+        margin:59px 0px 0px 0px;
+        position:fixed;
+    }
+    .contain{
+        position:absolute;
+        background-color:var(--white);
+        margin:70px 0px 0px 82px;
+        width:100%;
+        height:100%;
+    }
+    .header-container{
+        background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.7) 0%,
+        rgba(245, 245, 255, 0.4) 50%,
+        rgba(245, 0, 0, 0.1) 100%
+    );
+       border-radius:20px;
+       height:88%;
+       width:90%;
+       margin:-10px 0px 0px 10px;
+       animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    .header-content{    
+        margin:0px 0px 0px 40px;
+        word-spacing:10px;
+        line-height:85px;
+    }
+    .header-content > h1{
+        font-size:54px;
+        font-family:verdana;
+        color: #333;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        line-height: 1.5em;
+    }
+    .header-content > h1 > span{
+        color: skyblue;
+        text-shadow: 0px 0px 10px rgba(135, 206, 250, 0.8), 
+        0px 0px 20px rgba(0, 191, 255, 0.6);
+        font-weight: bold;
+        animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+    0% {
+        text-shadow: 0 0 10px rgba(135, 206, 250, 0.8), 0 0 20px rgba(0, 191, 255, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 50px rgba(135, 206, 250, 1), 0 0 70px rgba(0, 191, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(135, 206, 250, 0.8), 0 0 20px rgba(0, 191, 255, 0.6);
+    }
+}
+    .header-content > h1::after {
+        content: "Explore the best here!";
+        display: block;
+        margin-top: 4px;
+        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        color: #64748b;
+        font-style: italic;
+        animation: slideIn 2s ease;
+}
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+}
+    .header-content > p{
+        font-size: 44px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        Background-Color: black;
+        Color: #00FF41;
+        padding:15px;
+        margin:-10px 0px -70px -10px;
+        line-height:43px;
+        border-radius:10px;
+        text-shadow: 0 0 5px #00FF41, 0 0 10px #00FF41, 0 0 20px #00FF41;
+
+    }
+    .header-animation{
+        float:right;
+        margin:-100px 140px 0px 0px;
+        background-color:red;
+        padding:35px 20px;
+        animation:header-animation 1s infinite alternate, header-animation-2 0.4s infinite reverse;
+    }
+    @keyframes header-animation{
+        0% {background-color:white;color:red}
+        20% {background-color:skyblue;color:blue}
+        50% {background-color:lightgreen;color:green}
+        70% {background-color:gold;color:yellow}
+        100% {background-color:chocolate;color:blanchedalmond}
+    }
+    @keyframes header-animation-2{
+        0% {transform:rotateX(40deg) rotateY(40deg) rotateZ(40deg)}
+        50%{transform:rotateX(140deg) rotateY(40deg) rotateZ(190deg)}
+        100% {transform:rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(3.4)}
+    }
+    .page-1-first{
+        background-color:var(--white);
+        height:80%;
+        margin:220px 0px 0px 10px;
+        width:90%;
+    }
+    #page-1-first-content{
+        padding:0px 0px 5px 0px;
+        background-color:black;
+        color:bisque;
+        font-family:comic sans ms;
+        width:40%;
+        outline:6px solid darkslategrey;
+        font-size:24px;
+        float:left;
+        box-shadow:12px 20px 26px black
+    }
+    #page-1-first-content img:hover{
+        opacity:0.6;
+    }
+    #page-1-second{
+        background-color:rgba(0,0,0,0.02);
+        border-radius:3%;
+        width:58%;
+        height:100%;
+        float:right;
+        margin:-10px 0px 0px 0px
+    }
+    #page-1-second-content{
+        font-size: 30px;
+        word-wrap:break-word;
+        margin:-32px 0px 0px 4px;
+    }
+    #page-1-second-content > h1{
+        background-color:blanchedalmond;
+        border-radius:4%;
+        padding:10px;
+        text-decoration:underline black 3px;
+        text-shadow:2px 2px 8px darkgoldenrod;
+        box-shadow: 8px 16px 20px rgba(0, 0, 0, 1);
+   }
+   #page-1-second-content > h2{
+        word-wrap: break-word;
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 1.6;
+        padding: 20px;
+        background: linear-gradient(to right, #f7f7f7, #ffffff);
+        border-radius: 10px;
+        box-shadow: 8px 16px 20px rgba(0, 0, 0, 1);
+   }
+   #AI{
+        font-family: 'Comic Sans MS', sans-serif;
+        font-size: 1.6rem;
+        color: #ff4500;
+        text-shadow: 1px 1px 4px rgba(255, 69, 0, 0.7);
+        animation: glow 2s infinite alternate;
+   }
+   @keyframes glow {
+        0% {
+            text-shadow: 1px 1px 8px rgba(255, 69, 0, 0.8);
+        }
+        100% {
+            text-shadow: 2px 2px 10px rgba(255, 69, 0, 1);
+       }
+}  
+    #flying-stone {
+        background-color: red;
+        width: 120px;
+        height: 120px;
+        margin: 80px 0 0 4px;
+        border-radius: 50%;
+        animation: flying-stone 2s 0.1s infinite ease-in-out, flying-stone-color 2s infinite ease-in-out, 
+        flying-stone-shadow 2s infinite ease-in-out;
+    }
+    @keyframes flying-stone {
+        0% { transform: translate(180px, 120px) rotate(60deg) scale(1); }
+        20% { transform: translate(330px, 120px) rotate(120deg) scale(1.1); }
+        40% { transform: translate(480px, 120px) rotate(180deg) scale(1); }
+        60% { transform: translate(630px, 120px) rotate(240deg) scale(1.1); }
+        80% { transform: translate(780px, 120px) rotate(300deg) scale(1); }
+        100% { transform: translate(1130px, 120px) rotate(360deg) scale(1.1); }
+}
+    @keyframes flying-stone-color {
+        0%, 100% { background-color: red; }
+        25% { background-color: yellow; }
+        55% { background-color: green; }
+        85% { background-color: blue; }
+}
+    @keyframes flying-stone-shadow {
+        0%, 100% { box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); }
+        50% { box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5); }
+}
+   #page-2{
+        background-color:rgba(0,0,0,0.02);
+        width:90%;
+        height:700px;
+        margin:170px 0px 0px 4px;
+   }
+   #page-2-first-content{
+        background-color:rgba(0,0,0,0);
+        width:40%;
+        height:90%;
+        float:left;
+        margin:10px;
+   }
+   #page-2-first-content > h1{
+        font-size:35px;
+        font-family:comic sans ms;
+        color: black;
+        border-radius:10px;
+        box-shadow:10px 16px 12px black;
+        background-color:orange;
+        text-shadow:3px 3px 2px orangered,4px 4px 7px,1px 3px 3px black;
+        text-decoration:underline 3px var(--black);
+        word-wrap:break-word;
+        border:6px solid black
+   }
+   #page-2-first-content > h2{
+        margin:150px 0px 0px 0px;
+   }
+   #page-2-first-content > h2 {
+        word-wrap: break-word;
+        font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
+        color: #2c3e50;
+        text-align: center;
+        margin: 0px 0px 0px 0px 0px;
+        font-size: 2rem;
+        line-height: 1.4;
+        padding: 20px;
+        background: linear-gradient(to right, #e3f2fd, #ffffff);
+        border: 2px solid #2c3e50;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #page-2-first-content > h2:hover {
+        transform: translateY(-10px); /* Moves upward slightly on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhances shadow on hover */
+    }
+   #page-2-animation{
+        background-image:linear-gradient(to right,skyblue,red);
+        width:80px;
+        height:80px;
+        float:left;
+        margin:40px 0px 0px 100px;
+        animation:page-2-animation 1s 0s infinite;
+        border:1px solid black;
+        border-radius:20px
+   }
+   @keyframes page-2-animation{
+        33% {transform:rotate(120deg)}
+        66% {transform:rotate(240deg) scale(1.4)}
+        99% {transform:rotate(360deg)}
+   }
+   #page-2-second-content{
+        background-color:rgba(0,0,0,0);
+        float:right;
+        width:55%;
+        height:90%;
+        margin:20px 10px 0px 0px;
+   }
+   #page-2-first-image{
+        width:55%;
+        height:55%;
+        float:left;
+        margin:180px 0px 0px -30px;
+        border:7px groove aquamarine;
+        outline:2px solid black;
+        outline-offset:3px;
+        z-index:0
+   }
+   #page-2-second-image{
+        width:55%;
+        height:55%;
+        float:right;
+        display:block;
+        border:7px ridge aquamarine;
+        outline:2px solid black;
+        outline-offset:3px;
+        z-index:1;
+        margin:-450px 0px 0px 0px;
+   }
+   #page-2-second-content img:hover{
+        opacity:0.8;
+        border:14px solid aquamarine;
+        box-shadow:10px 16px 12px black;
+   }
+
+
+    </style>
+</head>
+<body>
+
+    <aside class="nav-column"> </aside>
+
+    <section class="contain">
+        <div class="header-container">
+            <div class="header-content">
+                <h1>Welcome to my <span>Website!</span><br>
+                    Let me show you my <br>
+                    "Main Website"
+                </h1>
+                <p>so today,our agenda is <br>"will review my website together"</p>
+            </div>
+            <div class="header-animation"> LMAO
+            </div>
+        </div>
+        <hr style="width:90%;margin:0px 0px 0px 12px;">
+        <div class="page-1-first"> 
+            <div id="page-1-first-content">
+                <img src="codingan.png" width="100%" height="40%" >
+                <q>codingan website pada hari ke-18</q>
+            </div>
+            <div id="page-1-second">
+                <div id="page-1-second-content">
+                    <h1>The picture next to this text,is my day 18 project code,<br>
+                        incorporate CSS and HTML 
+                    </h1>
+                    <h2 style="margin:70px 0px 0px 0px">
+                        (Also,there is a JavaScript in my website program,<br>>but it wasnn't me, i used<span id="AI"> A.I</span>  to help me)</h2>
+                </div>
+                <hr style="width:96%;margin:140px 0px 0px 12px;">
+            </div>
+        </div>
+        <div id="flying-stone">
+        </div>
+        <div id="page-2">
+            <div id="page-2-first-content">
+                <h1>The pile of images next to me is <em>my last HTML and Basic CSS Project</em></h1>
+                <h2>(Day 7 HTML last project and Day 4 CSS basic last project)</h2>
+                <div id="page-2-animation">
+                </div>
+            </div>
+            <div id="page-2-second-content">
+                <img src="day-7-html.png" id="page-2-first-image">
+                <img src="day-4-css.png" id="page-2-second-image">
+            </div>
+        </div>
+    </section>
+
+    <header id="header">
+        <div>
+           <img src="nav-icon.png" id="nav-icon">
+           <div id="nav-border"></div>
+           <img src="pfp.jpg" class="pfp">
+           <span class="dropdown-1">H
+            <span class="dropdown-content-1">Fresh Foliage <br>In The SnowField
+            </span>
+           </span>
+           <img src="better.png" id="question-icon">
+           <span class="dropdown-2">H
+            <span class="dropdown-content-2">
+                <ul style="list-style:circle">
+                    <li>nav bar ada di garis 3 <br>berjajar</li>
+                    <li>cursor ke pfp</li>
+                    <li>sisanya tinggal scroll</li>
+                </ul>
+            </span>
+           </span>
+        </div>
+        <div id="title">
+            Yukihara Main Webpage
+        </div>
+        <div id="header-animation">
+        </div>
+        <div id="header-animation2">
+        </div>
+        <div id="header-animation3">
+        </div>
+    </header>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const navIcon = document.getElementById("nav-icon"); 
+    const navbar = document.createElement("div"); 
+
+    navbar.id = "navbar";
+    navbar.style.position = "fixed";
+    navbar.style.top = "0";
+    navbar.style.left = "0";
+    navbar.style.width = "40px";
+    navbar.style.height = "100%";
+    navbar.style.backgroundColor = "black";
+    navbar.style.color = "white";
+    navbar.style.zIndex = "999";
+    navbar.style.padding = "20px";
+    navbar.style.display = "none"; 
+
+   
+    const closeButton = document.createElement("button");
+    closeButton.textContent = "Tutup";
+    closeButton.style.backgroundColor = "red";
+    closeButton.style.color = "white";
+    closeButton.style.border = "none";
+    closeButton.style.padding = "2px 5px";
+    closeButton.style.cursor = "pointer";
+    closeButton.style.marginBottom = "20px";
+    closeButton.style.marginLeft = "-4px" ;
+    closeButton.style.display = "block";
+
+    
+    closeButton.addEventListener("click", () => {
+        navbar.style.display = "none"; 
+    });
+
+    navbar.appendChild(closeButton);
+
+    const navMenu = document.createElement("ul");
+    navMenu.style.listStyle = "none";
+    navMenu.style.padding = "0";
+    navMenu.style.margin = "0";
+    navMenu.style.fontFamily = "Arial, sans-serif";
+
+    const menuItems = ["Profile","MyWork","Project","None" ];
+    menuItems.forEach((item) => {
+        const li = document.createElement("li");
+        li.style.marginBottom = "10px";
+        li.style.marginLeft = "-10px";
+
+        const link = document.createElement("a");
+        link.href = "#";
+        link.textContent = item;
+        link.style.color = "white";
+        link.style.textDecoration = "none";
+
+        li.appendChild(link);
+        navMenu.appendChild(li);
+    });
+
+    navbar.appendChild(navMenu);
+
+    document.body.appendChild(navbar);
+
+    navIcon.addEventListener("click", () => {
+        if (navbar.style.display === "none") {
+            navbar.style.display = "block"; 
+        } else {
+            navbar.style.display = "none"; 
+        }
+    });
+});
+
+    </script>
+    </body>
+</body>
+</html>
